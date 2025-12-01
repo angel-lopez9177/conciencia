@@ -1,7 +1,7 @@
 # conciencia
 Prototipo de la pagina web de conciencia.
 
-::: mermaid
+```mermaid
 graph TD
     A[Inicio: Usuario entra a conciencIA] --> B{¿Está Logueado?}
     
@@ -38,4 +38,4 @@ graph TD
     %% Estilos del diagrama
     style K fill:#0891b2,stroke:#333,stroke-width:2px,color:white
     style O fill:#7e22ce,stroke:#333,stroke-width:2px,color:white
-:::
+```
