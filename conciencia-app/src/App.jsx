@@ -16,7 +16,7 @@ import {
   RefreshCw,
   Copy
 } from 'lucide-react';
-
+import logoImg from './assets/conciencIA2.svg';
 
 const TEAM_MEMBERS = [
   { name: "Daniel Vargas", role: "CEO", icon: "👑" },
@@ -49,7 +49,7 @@ const Navbar = ({ currentPage, setCurrentPage, isLoggedIn, logout }) => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           <div className="flex items-center cursor-pointer" onClick={() => setCurrentPage('home')}>
-            <Brain className="h-8 w-8 text-cyan-400 mr-2" />
+            <img src={logoImg} alt="Logo ConciencIA" className="h-16 w-auto mr-2" /> 
             <span className="font-bold text-xl tracking-wider">concienc<span className="text-cyan-400">IA</span></span>
           </div>
           
@@ -303,7 +303,7 @@ const LoginPage = ({ onLogin }) => {
         <div className="min-h-screen bg-slate-900 flex items-center justify-center px-4">
             <div className="max-w-md w-full bg-white rounded-2xl shadow-2xl overflow-hidden">
                 <div className="bg-gradient-to-r from-cyan-600 to-blue-600 p-6 text-center">
-                    <Brain className="w-12 h-12 text-white mx-auto mb-2" />
+                    <img src={logoImg} alt="Logo ConciencIA" className="w-12 h-12 text-white mx-auto mb-2" />
                     <h2 className="text-2xl font-bold text-white">Acceso conciencIA</h2>
                     <p className="text-cyan-100 text-sm">Portal de Detección de Sesgos</p>
                 </div>
@@ -341,8 +341,7 @@ const LoginPage = ({ onLogin }) => {
                     </form>
                     <div className="mt-6 text-center">
                         <p className="text-xs text-gray-500">
-                            Nota: Este es un entorno de demostración. Puedes ingresar con cualquier dato.
-                            La base de datos es local (SQLite simulado).
+                            Conciencia
                         </p>
                     </div>
                 </div>
@@ -420,7 +419,7 @@ const AIDashboard = () => {
                                 }`}>
                                     {msg.role === 'ai' && (
                                         <div className="flex items-center mb-2 text-cyan-600 font-bold text-xs uppercase tracking-wide">
-                                            <Brain className="w-4 h-4 mr-1" /> Respuesta ConciencIA
+                                            <img src={logoImg} alt="Logo ConciencIA" className="w-4 h-4 mr-1" /> Respuesta ConciencIA
                                         </div>
                                     )}
                                     <div className="whitespace-pre-line text-sm leading-relaxed prose prose-sm max-w-none">
@@ -522,7 +521,7 @@ export default function App() {
         {renderPage()}
       </main>
 
-      {/* Footer simple con texto actualizado */}
+      {}
       {currentPage !== 'login' && currentPage !== 'dashboard' && (
         <footer className="bg-slate-950 text-slate-400 py-8 text-center text-sm">
             <p>&copy; 2025 ConciencIA. Todos los derechos reservados.</p>
