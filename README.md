@@ -3,6 +3,19 @@ Prototipo de la pagina web de conciencia.
 
 ```mermaid
 graph TD
+    %% --- PALETA DE COLORES (PRESENTABLE) ---
+    %% Verde: Inicio
+    classDef start fill:#22c55e,stroke:#14532d,stroke-width:2px,color:#fff,rx:10,ry:10;
+    %% Azul: Acciones del Usuario (Input)
+    classDef user fill:#3b82f6,stroke:#1e3a8a,stroke-width:2px,color:#fff;
+    %% Blanco/Gris: Sistema y Pantallas
+    classDef system fill:#ffffff,stroke:#475569,stroke-width:2px,color:#1e293b;
+    %% Morado: Inteligencia Artificial (El diferenciador)
+    classDef ai fill:#a855f7,stroke:#581c87,stroke-width:3px,stroke-dasharray: 5 5,color:#fff;
+    %% Naranja: Decisiones lógicas
+    classDef decision fill:#f97316,stroke:#9a3412,stroke-width:2px,color:#fff,rhombus;
+
+    %% --- TU DIAGRAMA ORIGINAL ---
     A[Inicio: Usuario entra a conciencIA] --> B{¿Está Logueado?}
     
     %% Flujo Público
@@ -35,7 +48,11 @@ graph TD
     S --> Q
     R -- No --> K
 
-    %% Estilos del diagrama
-    style K fill:#0891b2,stroke:#333,stroke-width:2px,color:white
-    style O fill:#7e22ce,stroke:#333,stroke-width:2px,color:white
+    %% --- ASIGNACIÓN DE ESTILOS ---
+    class A start
+    class L user
+    class B,J,M,R decision
+    class O,S ai
+    %% Todo lo demás es sistema
+    class C,D,E,F,G,H,I,K,N,P,Q system
 ```
